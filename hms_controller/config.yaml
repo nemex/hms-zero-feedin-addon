@@ -1,5 +1,5 @@
 name: "HMS Zero Feed-in Controller"
-version: "1.0.1"
+version: "1.0.2"
 slug: "hms_controller"
 description: "Schlanker Nulleinspeisungs-Regler für zwei Hoymiles HMS Wechselrichter, abgestimmt mit der offiziellen SunEnergy App (AC-Kopplung)."
 url: "https://github.com/nemex/sunenergy-ha-addon"

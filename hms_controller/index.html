@@ -327,7 +327,7 @@
 
     <div class="dashboard-grid">
       <!-- Grid Card -->
-      <div class="card col-8">
+      <div class="card col-12">
         <div class="card-header">
           <div class="card-title">Netzanschluss (Shelly 3EM)</div>
           <div class="card-subtitle" id="grid-source">Lese direkt vom Shelly</div>
@@ -348,42 +348,6 @@
         <!-- Trend Chart -->
         <div style="height: 150px; position: relative; margin-top: 1rem;">
           <canvas id="trendChart"></canvas>
-        </div>
-      </div>
-
-      <!-- SOC Batteries Card -->
-      <div class="card col-4">
-        <div class="card-header">
-          <div class="card-title">Speicher Status (SOC)</div>
-        </div>
-        <div class="battery-container">
-          <div class="battery-card">
-            <div class="battery-visual">
-              <svg class="battery-svg">
-                <circle class="battery-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="battery-bar" id="soc-bar-l1" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
-              </svg>
-              <div class="battery-text" id="soc-text-l1">0%</div>
-            </div>
-            <div style="text-align: center;">
-              <div style="font-weight: 600; font-size: 0.95rem;">L1 Speicher</div>
-              <div class="card-subtitle" id="l1-ac-out">AC: -- W</div>
-            </div>
-          </div>
-
-          <div class="battery-card">
-            <div class="battery-visual">
-              <svg class="battery-svg">
-                <circle class="battery-bg" cx="50" cy="50" r="40"></circle>
-                <circle class="battery-bar" id="soc-bar-l2" cx="50" cy="50" r="40" stroke-dasharray="251.2" stroke-dashoffset="251.2"></circle>
-              </svg>
-              <div class="battery-text" id="soc-text-l2">0%</div>
-            </div>
-            <div style="text-align: center;">
-              <div style="font-weight: 600; font-size: 0.95rem;">L2 Speicher</div>
-              <div class="card-subtitle" id="l2-ac-out">AC: -- W</div>
-            </div>
-          </div>
         </div>
       </div>
 
