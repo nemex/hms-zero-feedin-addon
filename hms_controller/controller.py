@@ -280,11 +280,27 @@ def main():
             if ha_set_number(hms_1600_entity, limit_1600_rounded):
                 last_written_1600 = limit_1600_rounded
                 
-        # 6. Read other status values for Web UI (disabled for local Cloud mode)
+        # 6. Read other status values for Web UI
         soc_l1 = 0.0
+        if soc_sensor:
+            soc_l1_val = ha_get_state(soc_sensor)
+            if soc_l1_val is not None:
+                try:
+                    soc_l1 = float(soc_l1_val)
+                except ValueError:
+                    pass
+                
         soc_l2 = 0.0
-        se_l1_op = 0.0
-        se_l2_op = 0.0
+        if soc_sensor_l2:
+            soc_l2_val = ha_get_state(soc_sensor_l2)
+            if soc_l2_val is not None:
+                try:
+                    soc_l2 = float(soc_l2_val)
+                except ValueError:
+                    pass
+                
+        se_l1_op = get_sunenergy_op(sunenergy_ip)
+        se_l2_op = get_sunenergy_op(sunenergy_ip_l2)
         
         # 7. Log regulation step
         timestamp_str = time.strftime("%Y-%m-%d %H:%M:%S")
